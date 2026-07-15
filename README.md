@@ -2,44 +2,100 @@
 
 ## Overview
 
-This repository contains the simulation models used for the development of the AI-Based Fault Detection System for an Industrial Exhaust Fan.
+This repository contains the software implementation of the **AI-Based Fault Detection System for an Industrial Exhaust Fan**. The project integrates real-time data acquisition, signal processing, machine learning, and automated fault response to monitor the operating condition of an exhaust fan.
 
-The simulations validate the electronic circuits, signal conditioning stages, and control strategies before hardware implementation.
-
----
-
-## Simulation Tools
-
-- Labview
-- Arduino IDE
+The system acquires data from multiple sensors, processes the measurements in LabVIEW, extracts relevant features, and uses a trained machine learning model to identify different fault conditions. Based on the detected fault, appropriate control actions are executed automatically.
 
 ---
 
-## Folder Structure
+## Technologies Used
 
-Labview/
-Arduino IDE/
-ML Model/
+- LabVIEW
+- Arduino IDE (Arduino Uno)
+- Python (Machine Learning)
+- NI DAQ
+- Custom Vibration Sensor
+- LM35 Temperature Sensor
+- ACS712 Current Sensor
+- IR Sensor
 
 ---
 
-## Simulations Included
+## Repository Structure
 
-### Sensors Input and Complete labview logic
+```
+├── LabVIEW/
+│   ├── Data Acquisition
+│   ├── Signal Processing
+│   ├── Fault Detection Logic
+│   └── Control Logic
+│
+├── Arduino/
+│   ├── Data Transmission
+│   └── Actuator Control
+│
+├── ML Model/
+    ├── Training Data
+    ├── Training Scripts
+    └── Trained Model
 
-- Getting Sensor Inputs
-- Processing it 
-- Identify the fault
+```
 
-### Actuator Control
+---
 
-- Take neccessary control action according to the fault
+## System Workflow
 
-### Sensor Interface
+1. Read sensor data from:
+   - LM35 Temperature Sensor
+   - ACS712 Current Sensor
+   - Custom Vibration Sensor
+   - IR Sensor
 
-- LM35
-- ACS712
-- Vibration sensor (custom built)
-- IR sensor
+2. Transfer sensor data to LabVIEW.
+
+3. Process and filter the acquired signals.
+
+4. Extract relevant features from the vibration signal.
+
+5. Use the trained machine learning model to classify the operating condition.
+
+6. Detect the fault type and display the system status.
+
+7. Execute the appropriate control action based on the detected fault.
+
+---
+
+## Fault Conditions
+
+The system is designed to identify the following operating conditions:
+
+- Normal Operation
+- Blade Impact Fault
+- Poor Ventilation
+- Fan OFF Condition
+
+---
+
+## Features
+
+- Real-time sensor monitoring
+- Data acquisition using NI DAQ
+- Signal processing in LabVIEW
+- AI-based fault classification
+- Automatic fault response
+- Modular system architecture
+- Easy integration with additional sensors
+
+---
+
+## Hardware Components
+
+- Arduino Uno
+- NI DAQ
+- LM35 Temperature Sensor
+- ACS712 Current Sensor
+- Custom Vibration Sensor
+- IR Sensor
+- PWM Exhaust Fan
 
 ---
