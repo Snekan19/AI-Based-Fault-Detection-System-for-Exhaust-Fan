@@ -138,6 +138,15 @@ Control Action
 ```
 
 ---
+## Before Running
+
+`train_model.py` and `predict.py` both set a hardcoded `BASE_FOLDER` path at the top of the file (currently pointing to a specific local machine's `D:\` drive). **Update this path to match your own local folder location before running either script**, or training/prediction will fail with a `FileNotFoundError`.
+
+```python
+BASE_FOLDER = r"D:\Academics\Sem 4\Electrical Measurements and Instrumentation\Project Files\Fan_Fault_ML"
+```
+
+---
 
 ## Requirements
 
