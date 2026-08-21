@@ -99,3 +99,7 @@ The system is designed to identify the following operating conditions:
 - PWM Exhaust Fan
 
 ---
+
+## Dashboard
+Real time web dashboard can be accessed through this link\
+https://ai-integrated-fault-detection-syste.vercel.app/
